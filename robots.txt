@@ -1,4 +1,8 @@
 User-agent: *
 Disallow:
 
+<<<<<<< HEAD
 Sitemap: https://sadeepchathushan.github.io/SadeepPortfolio/sitemap.xml
+=======
+Sitemap: https://sadeepchathushan.github.io/SadeepPortfolio/sitemap.xml
+>>>>>>> 5a256b254a5e8a68b7ba11a465c960b9157df19c
