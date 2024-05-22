@@ -10,10 +10,6 @@ export const About = () => {
         <div className={styles.content}>
             {/* <img src={getImageUrl("about/image")} alt="about image" className={styles.aboutImage}/> */}
         <ul className={styles.aboutItems}>
-        
-            <li className={styles.aboutItem}>
-                <p> About Me</p>
-            </li>
 
             <li className={styles.aboutItem}>
                 {/* <img src={getImageUrl("about/image")} alt="cursor icon" /> */}
