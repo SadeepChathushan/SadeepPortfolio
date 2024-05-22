@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://sadeepchathushan.github.io/SadeepPortfolio/sitemap.xml
