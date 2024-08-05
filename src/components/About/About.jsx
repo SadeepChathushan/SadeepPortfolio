@@ -25,10 +25,10 @@ export const About = () => {
             <li className={styles.aboutItem}> 
                 <div className={styles.aboutItemText}>
                     <p>
-                    I am also passionate about cybersecurity. I am currently enrolled in a Coursera cybersecurity course and
-                    have completed the "Foundations of Cybersecurity" course, which is the first course in the
-                    Google Cybersecurity Certificate program. I am continuing my learning journey by taking the 
-                    next courses in this program. </p>
+                    I am passionate about cybersecurity and am currently enrolled in a Coursera cybersecurity course. I have 
+                    completed the "Foundations of Cybersecurity" course and the "Play It Safe: Manage Security Risks" course.
+                     I am continuing my learning journey by taking the next courses in this program to further deepen my expertise 
+                     in cybersecurity.</p>
                 </div>
             </li>
 
