@@ -1,9 +1,9 @@
 :root {
     --color-text:#fff;
     --color-primary:#576cbc;
-    --color-secondary:#0e2652;
-    --color-dark:#0b2447;
-    --color-bg:#04152d;
+    --color-secondary:#08204d;
+    --color-dark:#072248;
+    --color-bg:#0c0c0c;
 
     /* fonts */
     --font-roboto:"Roboto";

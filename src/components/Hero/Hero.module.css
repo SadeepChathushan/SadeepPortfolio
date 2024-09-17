@@ -1,112 +1,195 @@
 @import "../../vars.css";
 
+/* Container styling */
 .container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 49px;
-  z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  border-radius: 20px;
+  margin: 0 10%;
 }
 
+
+/* Content section */
 .content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: var(--color-text);
   z-index: 1;
+  max-width: 600px;
+  animation: fadeIn 1.5s ease-out;
 }
 
 .title {
-  font-size: 72px;
+  font-size: 64px;
   font-weight: 900;
-  margin-bottom: 33px;
+  margin-bottom: 20px;
   font-family: var(--font-roboto);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 70%,
-    rgba(255, 255, 255, 0) 120%
-    );
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
+  background: linear-gradient(90deg, var(--color-primary) 30%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideIn 1.8s ease-out;
 }
 
 .description {
-  font-size: 30px;
+  font-size: 22px;
+  margin-bottom: 40px;
   font-family: var(--font-roboto);
-  margin-bottom: 52px;
+  line-height: 1.6;
+  animation: fadeIn 2s ease-out;
 }
 
 .contactBtn {
   text-decoration: none;
   background-color: var(--color-primary);
-  color: var(--color-text);
-  border-radius: 100px;
-  font-size: 30px;
+  color: white;
+  border-radius: 50px;
+  font-size: 20px;
   font-weight: 600;
-  padding: 17px 26px;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 15px 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2.5s ease-out;
 }
 
+.contactBtn:hover {
+  background-color: var(--color-secondary);
+  transform: scale(1.05);
+}
+
+
+
+/* Image styling */
 .heroImg {
-  width: 33%;
+  width: 450px; /* Adjust this based on how large you want the circle */
+  height: 500px;
+  border-radius: 50%; /* Keep the circular shape */
+  object-fit:cover; /* Ensure the full image fits inside the circle */
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); Add some shadow for a modern look */
+  transition: transform 0.3s ease; /* Add a hover effect */
+  animation: floatIn 2s ease-out; /* Animation on page load */
+  position: relative;
   z-index: 1;
-
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
 }
 
-@keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
-  50% {
-    transform: translate(0, 10px);
-  }
-  100% {
-    transform: translate(0, -0px);
-  }
+
+/* Hover effect to scale the image */
+.heroImg:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Floating and background blur circles */
+.topBlur, .bottomBlur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(200px);
 }
 
 .topBlur {
-  position: absolute;
-  width: 50vw;
-  height: 50vw;
-  min-width: 350px;
-  min-width: 350px;
-  top: -128px;
-  left: -10vw;
-  border-radius: 764px;
-  background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  left: -200px;
+  background: var(--color-primary);
+  opacity: 0.4;
 }
 
 .bottomBlur {
-  position: absolute;
-  width: 70vw;
-  height: 50vw;
-  min-width: 350px;
-  min-width: 250px;
-  /* top: 246px; */
-  right: -25vw;
-  border-radius: 764px;
-  background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
+  width: 500px;
+  height: 500px;
+  bottom: -100px;
+  right: -250px;
+  background: var(--color-secondary);
+  opacity: 0.3;
 }
 
+/* Social Icons */
+.socialIcons {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1;
+}
+
+.socialIcon {
+  color: white;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: var(--color-primary);
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column-reverse;
+    text-align: center;
+    padding: 50px 10px;
   }
 
   .content {
     align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .heroImg {
+    width: 350px; /* Maintain the same size for consistency */
+    height: 350px;
+    object-fit: contain; /* Ensure full image is displayed within the circle */
+  }
+
+  .socialIcons {
+    display: none; /* Hide social icons on mobile */
+  }
+
+  .circleBackground {
+    display: none; /* Hide the background circle on mobile */
   }
 }
