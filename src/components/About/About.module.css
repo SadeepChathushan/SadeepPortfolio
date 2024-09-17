@@ -1,94 +1,81 @@
-@import "../../vars.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 .container {
-    position: relative;
-    background-color: rgba(12,12,12,0.6);
-    border-radius: 15px;
-    padding: 35px;
-    margin-top: 52px;
-    z-index: 1;
-    margin-left: 10%;
-    margin-right: 10%;
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(12, 12, 12, 0.6);
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
+  font-family: 'Poppins', sans-serif; /* New Font */
 }
 
 .title {
-    color: var(--color-text);
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 1.75px;
-    text-transform: uppercase;
+  color: #ffffff;
+  font-size: 40px; /* Larger for prominence */
+  font-weight: 700;
+  letter-spacing: 2px; /* More space between letters */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Apply gradient fill */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  animation: fadeIn 1.5s ease-in-out;
+  margin-bottom: 60px;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.aboutItemText {
+  font-size: 20px; /* Cleaner size */
+  line-height: 1.8;
+  color: #e0e0e0; /* Lighter text color for contrast */
+  padding-left: 20px;
+  max-width: 60%;
+  letter-spacing: 1.2px; /* More spacing between letters */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.aboutItemText p {
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.aboutItemText p:hover {
+  color: #FC00FF; /* Color change on hover */
+  transform: scale(1.05); /* Slight scaling on hover */
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 830px) {
   .content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .aboutImage {
-    width: 35%;
-  }
-  
-  .aboutItems {
-    color: var(--color-text);
-    display: flex;
     flex-direction: column;
-    gap: 50px;
+    text-align: center;
   }
-  
-  .aboutItem {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 20px;
-    list-style: none;
-    padding: 25px;
-    background-image: linear-gradient(
-      90deg,
-      rgba(165, 215, 232, 0.42) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    transition: 0.4s;
+
+  .aboutItemText {
+    padding-left: 0;
+    margin-top: 20px;
+    max-width: 100%;
   }
-  
-  .aboutItem:hover {
-    background-size: 100% 100%;
-  }
-  
-  .aboutItem h3 {
-    font-size: 25px;
-    font-weight: 600;
-  }
-  
-  .aboutItem p {
-    font-size: 25px;
-  }
-  
-  @media screen and (max-width: 830px) {
-    .container {
-      background-color: transparent;
-      padding-left: 0;
-      padding-right: 0;
-    }
-  
-    .content {
-      flex-direction: column;
-    }
-  
-    .aboutImage {
-      display: none;
-    }
-  
-    .aboutItems {
-      margin-top: 29px;
-    }
-  
-    .aboutItem {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-  
+}

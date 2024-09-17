@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 900px;
+  color: var(--color-text);
+  font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 40px; /* Larger for prominence */
+    font-weight: 700;
+    letter-spacing: 2px; /* More space between letters */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Apply gradient fill */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    animation: fadeIn 1.5s ease-in-out;
+    padding: 20px;
+  background-color: rgba(12, 12, 12, 0.6);
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-left: -22%;
+  margin-right: 10%;
+  text-align: left;
+}
+
+.educationItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.timeLocation {
+  width: 20%;
+  font-size: 16px;
+  color: #b0b0b0;
+}
+
+.institutionDetails {
+  display: flex;
+  align-items: flex-start;
+  width: 75%;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.detailsText {
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+.detailsText h3 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.detailsText p {
+  margin: 5px 0;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: #2e2e2e;
+  margin: 20px 0;
+}
+
+@media (max-width: 830px) {
+  .educationItem {
+    flex-direction: column;
+  }
+
+  .timeLocation {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .institutionDetails {
+    width: 100%;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+}

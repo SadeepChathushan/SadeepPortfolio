@@ -26,6 +26,8 @@ export const Contact = () => {
              <a href="https://github.com/SadeepChathushan">github.com/SadeepChathushan </a>
             </li>
         </ul>
+        <div className={styles.topBlur} />
+        <div className={styles.bottomBlur} />
     </footer>
   );
 };

@@ -1,18 +1,14 @@
 [
-    {
-      "title": "HTML",
-      "imageSrc": "skills/HTML.svg"
-    },
-
-    {
-      "title": "CSS",
-      "imageSrc": "skills/CSS.svg"
-    },
-
+    
     {
       "title": "React",
       "imageSrc": "skills/React-Dark.svg"
     },
+    {
+      "title": "Spring",
+      "imageSrc": "skills/Spring.svg"
+  },
+  
 
     {
       "title": "PHP",
@@ -21,57 +17,18 @@
 
     
     {
-        "title": "C",
-        "imageSrc": "skills/C.svg"
-    },
-    
-    {
-        "title": "C++",
-        "imageSrc": "skills/CPP.svg"
-    },
-    
-    {
         "title": "Java",
         "imageSrc": "skills/javaD.svg"
     },
-    
     {
-        "title": "Scala",
-        "imageSrc": "skills/Scala-Dark.svg"
-    },
-    
+      "title": "JavaScript",
+      "imageSrc": "skills/js.svg"
+  },
+  
+   
     {
         "title": "MySQL",
         "imageSrc": "skills/mysql.svg"
-    },
-    
-    {
-        "title": "GitHub",
-        "imageSrc": "skills/Github-Dark.svg"
-    },
-    
-    {
-        "title": "Linux",
-        "imageSrc": "skills/linux.svg"
-    },
-    {
-        "title": "VSCode",
-        "imageSrc": "skills/VSCode-Dark.svg"
-    },
-      
-    {
-      "title": "Figma",
-      "imageSrc": "skills/Figma-Dark.svg"
-    },
-      
-    {
-      "title": "Bootstrap",
-      "imageSrc": "skills/Bootstrap.svg"
-    },
-      
-    {
-      "title": "Discord",
-      "imageSrc": "skills/Discord.svg"
     }
   ]
   

@@ -1,66 +1,56 @@
-import React from "react";
-
+import React, { useEffect, useRef } from "react";
+import * as THREE from "three";
 import styles from "./About.module.css";
-import { getImageUrl } from "../../utils";
 
 export const About = () => {
+  const mountRef = useRef(null);
+
+  useEffect(() => {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(300, 300); // Size of the animation
+    mountRef.current.appendChild(renderer.domElement);
+
+    const geometry = new THREE.SphereGeometry(5, 32, 32);
+    const material = new THREE.MeshStandardMaterial({
+      color: 0x0077ff,
+      wireframe: true, // Similar to the visual wrap effect
+    });
+    const sphere = new THREE.Mesh(geometry, material);
+    scene.add(sphere);
+
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(5, 10, 5).normalize();
+    scene.add(light);
+
+    camera.position.z = 10;
+
+    const animate = function () {
+      requestAnimationFrame(animate);
+      sphere.rotation.x += 0.01;
+      sphere.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    };
+
+    animate();
+
+    return () => {
+      mountRef.current.removeChild(renderer.domElement);
+    };
+  }, []);
+
   return (
     <section className={styles.container} id="about">
-        <h2 className={styles.title}> About </h2>
-        <div className={styles.content}>
-            {/* <img src={getImageUrl("about/image")} alt="about image" className={styles.aboutImage}/> */}
-        <ul className={styles.aboutItems}>
-
-            <li className={styles.aboutItem}>
-                {/* <img src={getImageUrl("about/image")} alt="cursor icon" /> */}
-                <div className={styles.aboutItemText}>
-                    <p>
-                   
-                    I am an undergraduate computer science student at the University of Colombo, currently in my second year.
-                    My academic journey has equipped me with both backend and frontend development skills, 
-                    with hands-on experience from my second-year project using PHP. </p>
-                </div>
-            </li>
-
-            <li className={styles.aboutItem}> 
-                <div className={styles.aboutItemText}>
-                    <p>
-                    I am passionate about cybersecurity and am currently enrolled in a Coursera cybersecurity course. I have 
-                    completed the "Foundations of Cybersecurity" course and the "Play It Safe: Manage Security Risks" course.
-                     I am continuing my learning journey by taking the next courses in this program to further deepen my expertise 
-                     in cybersecurity.</p>
-                </div>
-            </li>
-
-
-            <li className={styles.aboutItem}>
-                <div className={styles.aboutItemText}>
-                    <p>
-                    My educational journey began at St. Servatius College, where I was a senior member
-                    of the Western Band and an active participant in sports, being part of both the 
-                    Under 13 and Under 15 cricket teams. I also hold several sports certificates and have 
-                    achieved notable placements in national-level music competitions.</p>
-                </div>
-            </li>
-
-
-            <li className={styles.aboutItem}>
-                <div className={styles.aboutItemText}>
-                    <p>
-                    In my campus life, I have actively participated in sports and have earned several 
-                    certificates in inter-faculty competitions.</p>
-                </div>
-            
-            </li>
-
-        </ul>
-
+      <h2 className={styles.title}>About</h2>
+      <div className={styles.content}>
+        <div ref={mountRef} className={styles.animation}></div>
+        <div className={styles.aboutItemText}>
+          <p>I am a motivated Computer Science undergraduate with a strong passion for Software Engineering, specializing in full-stack development.</p>
+          <p>I work hard and am a quick learner, always striving to improve and maintain my knowledge.</p>
+          <p>I thrive at solving complex challenges and quickly adapting to new technologies.</p>
         </div>
+      </div>
     </section>
-    
   );
 };
-
-
-
-
