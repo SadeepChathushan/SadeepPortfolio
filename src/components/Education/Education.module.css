@@ -9,18 +9,18 @@
 }
 
 .title {
-    color: #ffffff;
-    font-size: 40px; /* Larger for prominence */
-    font-weight: 700;
-    letter-spacing: 2px; /* More space between letters */
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%); /* Gradient text */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Apply gradient fill */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Subtle shadow */
-    animation: fadeIn 1.5s ease-in-out;
-    padding: 20px;
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1.5s ease-in-out;
+  padding: 20px;
   background-color: rgba(12, 12, 12, 0.6);
   border-radius: 15px;
   margin-top: 50px;
@@ -75,22 +75,46 @@
   margin: 20px 0;
 }
 
+/* Mobile responsiveness for smaller screens */
 @media (max-width: 830px) {
+  .container {
+    padding: 15px;
+    max-width: 75%;
+  }
+
+  .title {
+    font-size: 40px;
+    margin-left:-11px;
+    margin-right: 0;
+    padding: 15px;
+  }
+
   .educationItem {
     flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .timeLocation, .institutionDetails {
+    width: 100%;
   }
 
   .timeLocation {
-    width: 100%;
     margin-bottom: 10px;
-  }
-
-  .institutionDetails {
-    width: 100%;
+    font-size: 14px;
+    text-align: left;
   }
 
   .logo {
     width: 50px;
     height: 50px;
+  }
+
+  .detailsText {
+    font-size: 16px;
+  }
+
+  .detailsText h3 {
+    font-size: 20px;
   }
 }
