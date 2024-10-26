@@ -17,12 +17,13 @@ export const Projects = () => {
 
         ,
         {
-            title: "EchoLynk - Communication Software Solution",
-            description: "An innovative and accessible software solution that addresses the communication challenges faced by Deaf and Mute individuals. The system has contextual text suggestions and visual cues for understanding the words and integrates the sign language detection model.",
-            image: "projects/Amoral1.png",
-            techStack: ["Android Native", "SQLite", "Generative AI", "React", "SpringBoot"],
-            githubLink : "https://github.com/Dilum-IR/Project_Amoral"
+            "title": "MaternEase - Web-based Maternity and Child Clinic Management System",
+            "description": "A web-based application designed to transform maternity and child clinic management in Sri Lanka. MaternEase introduces efficient appointment scheduling to reduce wait times and improve clinic operations, enhancing healthcare delivery for expectant mothers and children.",
+            "image": "projects/MaternEase.jpg",
+            "techStack": ["React", "React Vite", "Spring Boot", "MySQL", "Tailwind CSS", "Ant Design", "Flowbite"],
+            "githubLink": "https://github.com/orgs/MaternEase/repositories"
         }
+        
     ];
 
     return (
