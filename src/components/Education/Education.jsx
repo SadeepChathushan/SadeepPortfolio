@@ -17,7 +17,7 @@ export const Education = () => {
           <div className={styles.detailsText}>
             <h3>University of Colombo School of Computing</h3>
             <p>Bachelor of Science in Computer Science</p>
-            <p>Current GPA: 2.3/4.00</p>
+            {/* <p>Current GPA: 2.3/4.00</p> */}
           </div>
         </div>
       </div>
